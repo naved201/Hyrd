@@ -34,14 +34,14 @@ SyncEd bridges this gap by:
 
 ---
 
-## 🚀 Impact  
+## Impact  
 - **Educational Equity:** Supports learners in low-connectivity and underserved regions.  
 - **Scalability:** Works for K–12, higher education, vocational training, and adult learning.  
 - **Flexibility:** Compatible with existing infrastructure; no special hardware needed.  
 
 ---
 
-## 🏆 Why It’s Different  
+## Why It’s Different  
 Unlike existing LMS platforms:
 - **Not fully offline by default** – users control storage usage.  
 - **Not always-online only** – works in poor connectivity areas.  
@@ -49,7 +49,7 @@ Unlike existing LMS platforms:
 
 ---
 
-## 📅 Future Development  
+## Future Development  
 - Secure exam mode with integrity checks.  
 - AI-assisted lesson recommendations.  
 - Full integration with provincial learning management systems.  
