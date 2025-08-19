@@ -1,0 +1,134 @@
+/* Page */
+body {
+    margin: 0;
+    background-color: #f5f5f5;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    height: 120px;
+    color: white;
+    z-index: 100;
+}
+
+.inner {
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    height: 120px;
+    background-color: rgb(34 70 210);
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-family: Volkhov;
+    font-weight: 800;
+    font-size: 64px;
+    padding-left: 100px;
+    line-height: 120px; /* centers text in the header */
+}
+
+/* Bigger first letter */
+.logo-cap {
+    font-size: 1.35em;   /* make H larger than the rest */
+    font-weight: 800;    /* same weight, just bigger */
+    display: inline-block;
+    line-height: 1;
+    position: relative;  /* nudge if needed to sit on baseline */
+    top: 2px;            /* tweak 0–3px to align visually */
+}
+
+.content-row{
+    display:flex;
+}
+
+.placeholder{
+    height: 450px;
+    width: 600px;
+    background-color: yellow;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.placeholder-text{
+    text-align: center;
+    margin-top: 200px;
+}
+
+/* Card */
+.card {
+    width: 300px;
+    max-width: 92%;
+    height: 400px;
+    margin-top: 100px;
+    margin-right: 250px;
+    margin-left: auto;
+    background-color: white;
+    border: 2px solid rgb(34 70 210);
+    border-radius: 16px;
+    padding-top: 34px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Fields */
+.field { 
+    margin-top: 36px; 
+}
+
+.field input { /* CSS selection for all input fields under the field class. */
+    width: 93%;
+    padding: 12px 14px;
+    border: 1px solid rgb(229 231 235);
+    border-radius: 12px;
+    background-color: rgb(249 250 251);
+    font-size: 14px;
+    outline: none;
+}
+
+.field input:focus {
+    border-color: rgb(34 70 210);
+}
+
+/* Meta + actions */
+.meta {
+    margin: 6px 0 16px; 
+}
+
+.forgot {
+    display: block;
+    color: rgb(34 70 210);
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.forgot:hover { 
+    text-decoration: underline; 
+}
+
+.actions { 
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    width: 300px;
+    padding: 12px 18px;
+    margin-top: 36px;
+    border: none;
+    border-radius: 999px;
+    background-color: rgb(34 70 210);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(26 56 180); 
+    }
