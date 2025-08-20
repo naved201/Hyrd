@@ -1,0 +1,66 @@
+/* Header */
+.site-header {
+    display: flex;
+    height: 120px;
+    width: 100%;
+    color: white;
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgb(34 70 210);
+}
+
+.inner {
+    position: static;
+    width: 100%;
+    margin: 0 auto;
+    height: 120px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-family: Volkhov;
+    font-weight: 800;
+    font-size: 64px;
+    padding-left: 100px;
+    line-height: 120px; /* centers text in the header */
+}
+
+/* Bigger first letter */
+.logo-cap {
+    font-size: 1.35em;   /* make H larger than the rest */
+    font-weight: 800;    /* same weight, just bigger */
+    display: inline-block;
+    line-height: 1;
+    position: relative;  /* nudge if needed to sit on baseline */
+    top: 2px;            /* tweak 0–3px to align visually */
+}
+
+.web-icons{
+    display: flex;
+    height: 100%;
+    padding-top: 30px;
+}
+
+.profile-icon{
+    height: 45px;
+    margin-top: 10px;
+}
+
+.settings-icon{
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.profile-icon:hover{
+    cursor: pointer;
+}
+
+.settings-icon:hover{
+    cursor: pointer;
+}
