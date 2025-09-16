@@ -1,36 +1,60 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hyrd</title>
 
-<html lang = "en">
+    <!-- Shared header styles + font -->
+    <link rel="stylesheet" href="../common-css-resources/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Volkhov:wght@700;800&display=swap" rel="stylesheet">
 
-    <head>
-        <title>Hyrd</title>
+    <!-- Page-specific styles (added) -->
+    <link rel="stylesheet" href="homepage.css">
+  </head>
 
-        <link rel="stylesheet" href="../common-css-resources/header.css"> <!--For the site header-->
-        <link href="https://fonts.googleapis.com/css2?family=Volkhov:wght@700;800&display=swap" rel="stylesheet">
+  <body>
+    <!-- Site Header -->
+    <div class="site-header">
+      <div class="inner">
+        <a class="logo" href="#"><span class="logo-cap">H</span>YRD</a>
+      </div>
+      
+    </div>
 
-    </head>
+    <!-- Landing content -->
+    <main class="row">
+      <!-- Left: placeholder/hero copy -->
+      <section class="placeholder-card">
+        <h1 class="hero-title">Find jobs that match your resume</h1>
+        <p class="placeholder-text">
+          Upload your résumé to get instant job matches, or generate a résumé from your skills and experience.
+        </p>
+        <ul class="benefits">
+          <li>ATS-friendly parsing</li>
+          <li>Explainable match scores</li>
+          <li>Save & track applications</li>
+        </ul>
+      </section>
 
-    <body>
-        
-        <div class = "site-header">
+      <!-- Right: CTA panel -->
+      <section class="cta-card" aria-labelledby="cta-title">
+        <h2 id="cta-title">Get matched in minutes</h2>
 
-            <div class="inner">
-
-                <a class="logo" href="#"><span class = "logo-cap">H</span>YRD</a>
-
-            </div>
-
-            <div class = "web-icons">
-                <img class = "profile-icon" src = "../icons/profile-icon.png">
-                <img class = "settings-icon" src = "../icons/settings-icon.png">
-            </div>
-
+        <!-- Upload -->
+        <div class="uploader">
+          <div class="drop" aria-label="Upload resume">
+            <p>Drop PDF here or <button class="link-btn" type="button">choose file</button></p>
+          </div>
         </div>
 
-        <div class = "text-card">
+        <div class="or">or</div>
 
+        <!-- Generate -->
+        <div class="generate">
+          <button class="btn primary" type="button">Generate resume</button>
+          <p class="fine">Prefer to type your skills? We’ll build the resume and match jobs.</p>
         </div>
-
-    </body>
-
+      </section>
+    </main>
+  </body>
 </html>
