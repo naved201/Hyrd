@@ -1,7 +1,7 @@
 .job-listing-card{
     display: flex;
     position: relative;
-    width: 1267px;
+    width: min(1267px, 90%);
     height: 600px;
     background-color: whitesmoke;
     top: 150px;
@@ -21,24 +21,41 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    translate: -50%;
 }
 
 .search-row{
     
     /*translate: -125%;*/
     height: 35px;
-    width: 100%;
+    width: 80%;
     margin-top: 20px;
+    position: absolute;
+    right: 40px;
 }
 
 .search-bar{
     height: 100%;
-    width: calc(100% - 520px);
+    width: calc(100% - 420px);
     border-radius: 15px;
     border-color: black;
     border-width: 1px;
     text-align: center;
-    margin-left: 320px;
+    margin-left: 300px;
+    
+}
+
+.job-listings{
+    display: flex;
+    border-color: rgb(201 201 201);
+    border-width: 2px;
+    border-right-style: solid;
+    
+}
+
+.job-listings-header{
+    height: 55px;
+    width: 400px;
+    background-color: rgb(34 70 210);
+    border-top-left-radius: 20px;
     
 }
