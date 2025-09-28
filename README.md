@@ -15,10 +15,9 @@ Hyrd is a simple website that enables users to upload their resume or create one
 
 ## Screenshots
 This is a project underway. Screenshots of the latest updates will be displayed here. 
-```
+
 ### Landing Page
 ![image alt](https://github.com/naved201/Hyrd/blob/91608738b327119c2561e3926b9ec173dcf33390/media/Homepage.png)
 
 ### Job Listings Page
 ![image alt](https://github.com/naved201/Hyrd/blob/170675fba00d8c1d2242106d79ced920aa88828c/media/joblisings.png)
-```
