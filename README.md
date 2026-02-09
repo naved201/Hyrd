@@ -1,23 +1,16 @@
-# Hyrd
+# React + Vite
 
-## Project Concept
-Hyrd is a simple website that enables users to upload their resume or create one on the fly. Once the resume has been fed to the website, jobs that best match the user's resume will show up. No sign-up required. Although the initial user flow is about taking a resume and matching jobs, the user will be able to search for jobs manually as well, after job matches show up. 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Tech Stack
-* HTML/CSS: UI/UX
-* JavaScript: file uploads, calling the matching APIs, validating forms, and updating the UI (search, filters, and results) without page reloads
-* AWS Textract: parsing text in resumes
-* AWS Lambda: API calls to job sites
-* AWS S3: hosts the static site and provides temporary storage for resumes during the user's session
+Currently, two official plugins are available:
 
-## Challenges 
-* "Best-matched" jobs are defined as job descriptions against which the user's resume would come out with maximum ATS scores. Yet to figure out the mechanism of implementing this core functionality.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Screenshots
-This is a project underway. Screenshots of the latest updates will be displayed here. 
+## React Compiler
 
-### Landing Page
-![image alt](https://github.com/naved201/Hyrd/blob/91608738b327119c2561e3926b9ec173dcf33390/media/Homepage.png)
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### Job Listings Page
-![image alt](https://github.com/naved201/Hyrd/blob/170675fba00d8c1d2242106d79ced920aa88828c/media/joblisings.png)
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
