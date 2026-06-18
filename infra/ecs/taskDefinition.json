@@ -1,0 +1,66 @@
+{
+  "family": "hyrd-backend",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "executionRoleArn": "arn:aws:iam::YOUR_ACCOUNT_ID:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::YOUR_ACCOUNT_ID:role/hyrdTaskRole",
+  "containerDefinitions": [
+    {
+      "name": "hyrd-backend",
+      "image": "YOUR_ACCOUNT_ID.dkr.ecr.ca-central-1.amazonaws.com/hyrd-backend:latest",
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "secrets": [
+        {
+          "name": "DATABASE_URL",
+          "valueFrom": "arn:aws:secretsmanager:ca-central-1:YOUR_ACCOUNT_ID:secret:hyrd/database-url"
+        },
+        {
+          "name": "ANTHROPIC_API_KEY",
+          "valueFrom": "arn:aws:secretsmanager:ca-central-1:YOUR_ACCOUNT_ID:secret:hyrd/anthropic-api-key"
+        },
+        {
+          "name": "ADZUNA_APP_ID",
+          "valueFrom": "arn:aws:secretsmanager:ca-central-1:YOUR_ACCOUNT_ID:secret:hyrd/adzuna-app-id"
+        },
+        {
+          "name": "ADZUNA_APP_KEY",
+          "valueFrom": "arn:aws:secretsmanager:ca-central-1:YOUR_ACCOUNT_ID:secret:hyrd/adzuna-app-key"
+        },
+        {
+          "name": "RESEND_API_KEY",
+          "valueFrom": "arn:aws:secretsmanager:ca-central-1:YOUR_ACCOUNT_ID:secret:hyrd/resend-api-key"
+        },
+        {
+          "name": "SUPABASE_JWT_SECRET",
+          "valueFrom": "arn:aws:secretsmanager:ca-central-1:YOUR_ACCOUNT_ID:secret:hyrd/supabase-jwt-secret"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/hyrd-backend",
+          "awslogs-region": "ca-central-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "healthCheck": {
+        "command": [
+          "CMD-SHELL",
+          "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health')\" || exit 1"
+        ],
+        "interval": 30,
+        "timeout": 10,
+        "retries": 3,
+        "startPeriod": 10
+      }
+    }
+  ]
+}

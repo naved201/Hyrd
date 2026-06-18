@@ -1,0 +1,13 @@
+[
+  {
+    "AllowedHeaders": ["*"],
+    "AllowedMethods": ["PUT", "GET"],
+    "AllowedOrigins": [
+      "http://localhost:3000",
+      "https://hyrd.app",
+      "https://*.vercel.app"
+    ],
+    "ExposeHeaders": ["ETag"],
+    "MaxAgeSeconds": 3000
+  }
+]
