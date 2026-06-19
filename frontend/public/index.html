@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hyrd</title>
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-name-first-letter">H</span> <span class = "brand-name-rest-of-the-letters">yrd</span>
+      </div>
+
+      <nav class="folder-list">
+        <div class="folder" data-folder="resumes">
+          <button class="folder-toggle" data-toggle="resumes">
+            <span class="chevron">&rsaquo;</span>
+            <span class="folder-icon">&#128193;</span>
+            <span class="folder-label">Resumes</span>
+          </button>
+          <div class="folder-body" id="resumes-body" hidden><p>No resume uploaded yet</p></div>
+        </div>
+
+        <div class="folder" data-folder="applications">
+          <button class="folder-toggle expanded" data-toggle="applications">
+            <span class="chevron">&rsaquo;</span>
+            <span class="folder-icon">&#128193;</span>
+            <span class="folder-label">Applications</span>
+          </button>
+          <div class="folder-body" id="applications-body" hidden>
+            <p class="empty-state">No applications yet</p> 
+          </div>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="avatar">AJ</div>
+        <div class="user-meta">
+          <span class="user-name">Alex Johnson</span>
+          <span class="user-email">alex.johnson@gmail.com</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="empty-feed">
+        <div class="empty-icon">&#10010;</div>
+        <h1 class="empty-title">Find your perfect job match</h1>
+        <p class="empty-subtitle">
+          Upload your resumes in the sidebar, then ask me to find the best matching
+          positions for any of them.
+        </p>
+
+        <div class="presets">
+          <button class="preset-button" data-preset="Give me the best matching jobs for Resume 1">
+            <span>Give me the best matching jobs for Resume 1</span>
+            <span class="preset-chevron">&rsaquo;</span>
+          </button>
+          <button class="preset-button" data-preset="Find software engineering roles for Resume 2">
+            <span>Find software engineering roles for Resume 2</span>
+            <span class="preset-chevron">&rsaquo;</span>
+          </button>
+          <button class="preset-button" data-preset="What jobs match my skills in Resume 1?">
+            <span>What jobs match my skills in Resume 1?</span>
+            <span class="preset-chevron">&rsaquo;</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="composer">
+        <form class="composer-form" id="composer-form">
+          <input
+            type="text"
+            id="composer-input"
+            class="composer-input"
+            placeholder="Ask me to find jobs matching your resume..."
+            autocomplete="off"
+          />
+          <button type="submit" class="composer-send" aria-label="Send">&#10148;</button>
+        </form>
+        <p class="composer-hint">Run Hyrd on your desktop for the best experience.</p>
+      </div>
+
+      <button class="help-button" aria-label="Help">?</button>
+    </main>
+  </div>
+
+  <script src="landing.js"></script>
+</body>
+</html>
