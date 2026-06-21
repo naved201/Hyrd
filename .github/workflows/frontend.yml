@@ -37,7 +37,7 @@ jobs:
 
       - name: Run TypeScript type check
         working-directory: frontend
-        run: npm run type-check
+        run: npm run typecheck
 
 # Vercel deploys automatically on push to main
 # Preview deployments created on every PR
