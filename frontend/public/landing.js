@@ -1,3 +1,5 @@
+const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
 document.addEventListener("DOMContentLoaded", () => {
   const toggles = document.querySelectorAll("[data-toggle]");
   toggles.forEach((toggle) => {
