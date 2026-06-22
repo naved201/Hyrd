@@ -5,6 +5,9 @@ node_modules/
 .next/
 out/
 
+# Auth
+frontend/app/(auth)/
+
 # Python
 __pycache__/
 *.pyc
