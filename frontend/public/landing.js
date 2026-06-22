@@ -19,6 +19,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const signInButton = document.getElementById("sign-in-button");
+  const loginOverlay = document.getElementById("login-overlay");
+  const loginModalClose = document.getElementById("login-modal-close");
+
+  signInButton.addEventListener("click", () => {
+    loginOverlay.removeAttribute("hidden");
+  });
+
+  loginModalClose.addEventListener("click", () => {
+    loginOverlay.setAttribute("hidden", "");
+  });
+
+  loginOverlay.addEventListener("click", (event) => {
+    if (event.target === loginOverlay) {
+      loginOverlay.setAttribute("hidden", "");
+    }
+  });
+
   const input = document.getElementById("composer-input");
   const form = document.getElementById("composer-form");
 
